@@ -1,0 +1,26 @@
+<template id="template-skeleton">
+  {% render 'skeleton' %}
+</template>
+
+<template id="template-product-insurance">
+  <label for="add_insurance">Add insurance to <span class="variantName"></span> for <span class="price"></span></label>
+  <input class="checkbox" type="checkbox" id="add_insurance" name="add insurance">
+</template>
+
+<product-insurance variant='{{ product.selected_or_first_available_variant | json }}'>
+  {% render 'skeleton' %}
+</product-insurance>
+
+{% schema %}
+{
+  "name": "product insurance",
+  "target": "section",
+  "javascript": "product_insurance.js",
+  "stylesheet": "product_insurance.css",
+  "settings": [
+    { "type": "product", "id": "product", "label": "product", "autofill": true },
+    { "type": "color", "id": "colour", "label": "Star Colour", "default": "#ff0000" }
+  ]
+}
+{% endschema %}
+

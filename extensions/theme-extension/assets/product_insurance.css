@@ -1,0 +1,31 @@
+product-insurance {
+  border: 1px solid lightgray;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.skeleton-block {
+  flex: 1;
+  height: 30px;
+  background: #ccc;
+  animation: pulse 2s infinite;
+  display: block !important;
+}
+
+product-insurance .checkbox {
+  flex: 0 1 30px;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #aaa;
+  }
+  50% {
+    background-color: #eee;
+  }
+  100% {
+    background-color: #aaa;
+  }
+}
